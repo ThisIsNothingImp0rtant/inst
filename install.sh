@@ -42,6 +42,9 @@ if [ "$TEST" == "FREEDOM" ]; then
     echo "[*] Downloading freedom.sh..."
     curl -fsSL https://raw.githubusercontent.com/ThisIsNothingImp0rtant/frsh/refs/heads/main/freedom.sh -o ./freedom.sh
     chmod +x ./freedom.sh
+    echo "[*] Calculating Checksums:"
+    /sbin/sha256 ./freedom.sh
+    /sbin/md5 ./freedom.sh
     echo "[*] Installation completed. You can now attempt a takeover of your system."
     exit 0
 fi
